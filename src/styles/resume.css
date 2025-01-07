@@ -1,0 +1,18 @@
+.resume-container {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-top: 1.5rem;
+    overflow: hidden;
+  }
+  
+  .resume-section {
+    padding: 1.25rem;
+  }
+  
+  .resume-heading {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #111827;
+    margin-bottom: 1rem;
+  }
