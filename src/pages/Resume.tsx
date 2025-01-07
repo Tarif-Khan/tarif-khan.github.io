@@ -1,16 +1,14 @@
 import React from 'react';
-import '../styles/resume.css';
+import PDFViewer from '../components/PDFViewer';
+import '../styles/experiences.css';
+import '../styles/resumeview.css';
 
 const Resume = () => {
+  const pdfUrl = "/Khan Tarif Resume.pdf";
   return (
     <div className="content-wrapper">
       <h2 className="section-title">Resume</h2>
-      <div className="resume-container">
-        <div className="resume-section">
-          <h3 className="resume-heading">Professional Experience</h3>
-          {/* Add your resume content here */}
-        </div>
-      </div>
+      <PDFViewer pdfUrl={pdfUrl} />
     </div>
   );
 };

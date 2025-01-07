@@ -1,0 +1,27 @@
+.pdf-viewer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+  }
+  
+  .pdf-container {
+    border: 1px solid #ccc;
+    padding: 16px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  .download-button {
+    margin-top: 20px;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+  }
+  

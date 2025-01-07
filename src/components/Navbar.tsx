@@ -6,8 +6,8 @@ import '../styles/navbar.css';
 const Navbar = () => {
   const navItems = [
     { to: '/', text: 'Home', Icon: Home },
-    { to: '/resume', text: 'Resume', Icon: FileText },
     { to: '/experiences', text: 'Experiences', Icon: Briefcase },
+    { to: '/resume', text: 'Resume', Icon: FileText },
     { to: '/projects', text: 'Projects', Icon: Code },
     { to: '/contact', text: 'Contact Me', Icon: Mail },
   ];
