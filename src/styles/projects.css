@@ -1,18 +1,78 @@
 .projects-container {
-    background-color: white;
-    border-radius: 0.5rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    margin-top: 1.5rem;
-    overflow: hidden;
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
   }
   
-  .projects-section {
-    padding: 1.25rem;
+  .projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
   }
   
-  .projects-heading {
+  .project-card {
+    display: block;
+    background: white;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .title {
     font-size: 1.25rem;
-    font-weight: 500;
+    font-weight: 600;
     color: #111827;
+    margin-bottom: 0.5rem;
+  }
+  
+  .date {
+    color: #4b5563;
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .location {
+    color: #6b7280;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
     margin-bottom: 1rem;
+  }
+  
+  .details {
+    list-style-type: disc;
+    padding-left: 1.25rem;
+    color: #374151;
+    margin-bottom: 1rem;
+  }
+  
+  .details li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+  }
+  
+  .skills {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+  
+  .skill-badge {
+    background-color: #e0f2fe;
+    color: #0369a1;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
   }

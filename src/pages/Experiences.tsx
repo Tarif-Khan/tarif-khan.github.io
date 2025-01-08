@@ -8,7 +8,7 @@ const experienceData = [
     position: "Quantitative Researcher Co-op",
     company: "Wellington Management",
     location: "Boston, MA",
-    date: "December 2023- July 2024",
+    date: "December 2023 - July 2024",
     link: "https://www.wellington.com/en",
     responsibilities: [
       "Developed pre-trade cost models for Municipal Bonds, Securitized Products, Derivatives, and Futures in Python",
@@ -25,7 +25,7 @@ const experienceData = [
     position: "Teaching Assistant: Algorithms and Data Structures",
     company: "Khoury College of Computer Sciences at Northeastern University",
     location: "Boston, MA",
-    date: "April 2024- June 2024",
+    date: "April 2024 - June 2024",
     link: "https://www.khoury.northeastern.edu/",
     responsibilities: [
       "Assisted 110 students by holding office hours, and instructing recitations",
@@ -38,7 +38,7 @@ const experienceData = [
     position: "Career Peer Ambassador",
     company: "Khoury College of Computer Sciences at Northeastern University",
     location: "Boston, MA",
-    date: "September 2023- April 2024",
+    date: "September 2023 - April 2024",
     link: "https://www.khoury.northeastern.edu/",
     responsibilities: [
       "Mentored 328 freshmen from the class of 2027 with regards to class programming and career planning",
@@ -51,7 +51,7 @@ const experienceData = [
     position: "Quantitative Software Engineer Summer Intern",
     company: "Quantum Technologies",
     location: "New York, NY",
-    date: "June 2023- September 2023",
+    date: "June 2023 - September 2023",
     responsibilities: [
       "Collaborated with quantitative researchers to implement a proprietary trading strategy for XAUUSD using Python",
       "Enhanced the performance of traders through trade cost analysis (TCA) up to a 15% increase in alpha per trade",
@@ -64,7 +64,7 @@ const experienceData = [
     position: "Software Engineering Co-op",
     company: "Scotiabank",
     location: "New York, NY",
-    date: "January 2023- June 2023",
+    date: "January 2023 - June 2023",
     link: "https://www.gbm.scotiabank.com/en/about-overview/our-global-presence/united-states-campaign.html/",
     responsibilities: [
       "Released a platform to recover lost single as well as grouped trade files sent from Goldman Sachs, JP Morgan, Omgeo, Jane Street and 11 other clients through input of a Swift Reference or Message ID",
@@ -80,7 +80,7 @@ const experienceData = [
     position: "Teaching Assistant: Discrete Structures",
     company: "Khoury College of Computer Sciences at Northeastern University",
     location: "Boston, MA",
-    date: "August 2022- December 2022",
+    date: "August 2022 - December 2022",
     link: "https://www.khoury.northeastern.edu/",
     responsibilities: [
       "Administered weekly office hours and facilitated discussion through Piazza threads for 755 students",
