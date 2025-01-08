@@ -7,7 +7,6 @@ import Experiences from './pages/Experiences';
 import Contact from './pages/Contact';
 import './styles/layout.css';
 import Projects from './pages/Projects';
-require("dotenv").config()
 
 function App() {
   return (

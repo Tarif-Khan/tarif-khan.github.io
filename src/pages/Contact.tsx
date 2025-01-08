@@ -2,7 +2,6 @@ import React, { useState, ChangeEvent, FormEvent } from 'react';
 import emailjs from '@emailjs/browser';
 import '../styles/contact.css';
 
-
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -24,18 +23,25 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    const serviceId = process.env.SERVICE_KEY as string;
-    const templateId = process.env.TEMPLATE_ID as string;
-    const userId = process.env.API_KEY as string;
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID!;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID!;
+    const userId = import.meta.env.VITE_EMAILJS_USER_ID!;
 
+    
+    const templateParams = {
+      user_name: formData.name, 
+      user_email: formData.email, 
+      message: formData.message, 
+    };
 
     emailjs
-      .send(serviceId, templateId, formData, userId)
+      .send(serviceId, templateId, templateParams, userId)
       .then(() => {
         setStatusMessage('Message sent successfully!');
         setFormData({ name: '', email: '', message: '' });
       })
-      .catch(() => {
+      .catch((error) => {
+        console.error('EmailJS error:', error); 
         setStatusMessage('Failed to send message. Please try again.');
       })
       .finally(() => {
