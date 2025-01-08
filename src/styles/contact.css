@@ -47,3 +47,9 @@
 .submit-button:hover {
   background-color: #2563eb;
 }
+
+.status-message {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: red;
+}

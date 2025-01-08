@@ -1,28 +1,98 @@
-import React from 'react';
+import React, { useState, ChangeEvent, FormEvent } from 'react';
+import emailjs from '@emailjs/browser';
 import '../styles/contact.css';
 
+
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [statusMessage, setStatusMessage] = useState('');
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const serviceId = process.env.SERVICE_KEY as string;
+    const templateId = process.env.TEMPLATE_ID as string;
+    const userId = process.env.API_KEY as string;
+
+
+    emailjs
+      .send(serviceId, templateId, formData, userId)
+      .then(() => {
+        setStatusMessage('Message sent successfully!');
+        setFormData({ name: '', email: '', message: '' });
+      })
+      .catch(() => {
+        setStatusMessage('Failed to send message. Please try again.');
+      })
+      .finally(() => {
+        setIsSubmitting(false);
+      });
+  };
+
   return (
     <div className="content-wrapper">
       <h2 className="section-title">Contact Me</h2>
       <div className="contact-form">
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="name" className="form-label">Name</label>
-            <input type="text" name="name" id="name" className="form-input" />
+            <input
+              type="text"
+              name="name"
+              id="name"
+              className="form-input"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
           </div>
           <div className="form-group">
             <label htmlFor="email" className="form-label">Email</label>
-            <input type="email" name="email" id="email" className="form-input" />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              className="form-input"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
           </div>
           <div className="form-group">
             <label htmlFor="message" className="form-label">Message</label>
-            <textarea id="message" name="message" rows={4} className="form-input" />
+            <textarea
+              id="message"
+              name="message"
+              rows={4}
+              className="form-input"
+              value={formData.message}
+              onChange={handleChange}
+              required
+            />
           </div>
-          <button type="submit" className="submit-button">
-            Send Message
+          <button
+            type="submit"
+            className="submit-button"
+            disabled={isSubmitting}
+          >
+            {isSubmitting ? 'Sending...' : 'Send Message'}
           </button>
         </form>
+        {statusMessage && <p className="status-message">{statusMessage}</p>}
       </div>
     </div>
   );
