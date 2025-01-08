@@ -10,7 +10,7 @@ import Projects from './pages/Projects';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/Personal-Website">
       <div className="page-container">
         <Navbar />
         <main>
