@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/resumeview.css';
 
 const Resume = () => {
-  const pdfUrl = "/Personal-Website/Khan_Tarif_Resume.pdf";
+  const pdfUrl = "/Khan_Tarif_Resume.pdf";
 
   return (
     <div className="content-wrapper">
