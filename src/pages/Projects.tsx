@@ -70,7 +70,7 @@ const projectsData = [
     location: "New York, NY",
     link: "https://play.unity.com/en/games/75fb120d-7c1b-4a83-ada5-78dcef44321b/destroy-the-witches",
     details: [
-      "Created a game where a character is taking on witches baked in using AI using Unity and C#",
+      "Created a game where a character is taking on witches using Unity and C#",
       "Distributed the game on Unity online with over 50 plays",
       "Implemented advesarial AI agents using finite state machines, perceptrons and the A* algorithm"
     ],
