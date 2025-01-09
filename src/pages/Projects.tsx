@@ -26,6 +26,7 @@ const projectsData = [
     details: [
       "Created a zombie survival game with group mates from scratch using Unity and C#",
       "Distributed the game on Unity online with over 190 plays",
+      "Implemented advesarial AI agents using A* and finite state machines with perceptrons",
     ],
     skills: ["C#", "Unity"]
   },
@@ -38,6 +39,7 @@ const projectsData = [
     details: [
       "Created a game which simulates an antibody taking on viruses using Unity and C#",
       "Distributed the game on Unity online with over 50 plays",
+      "Implemented advesarial AI using the A* algorithm"
     ],
     skills: ["C#", "Unity"]
   },
@@ -70,6 +72,7 @@ const projectsData = [
     details: [
       "Created a game where a character is taking on witches baked in using AI using Unity and C#",
       "Distributed the game on Unity online with over 50 plays",
+      "Implemented advesarial AI agents using finite state machines, perceptrons and the A* algorithm"
     ],
     skills: ["C#", "Unity"]
   },
