@@ -24,7 +24,7 @@ const projectsData = [
     location: "New York, NY",
     link: "https://play.unity.com/en/games/b64ca121-5c2d-4d28-ab60-8e1bb2ce193e/z0mb13z4l1-f3",
     details: [
-      "Created a zombie survival game from scratch using Unity and C#",
+      "Created a zombie survival game with group mates from scratch using Unity and C#",
       "Distributed the game on Unity online with over 190 plays",
     ],
     skills: ["C#", "Unity"]
