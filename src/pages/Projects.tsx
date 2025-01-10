@@ -26,7 +26,7 @@ const projectsData = [
     details: [
       "Created a zombie survival game with group mates from scratch using Unity and C#",
       "Distributed the game on Unity online with over 190 plays",
-      "Implemented advesarial AI agents using A* and finite state machines with perceptrons",
+      "Implemented adversarial AI agents using A* and finite state machines with perceptrons",
     ],
     skills: ["C#", "Unity"]
   },
