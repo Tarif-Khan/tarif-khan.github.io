@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Github, Instagram, Linkedin } from 'lucide-react';
 import '../styles/home.css';
 
 const Home = () => {
@@ -39,6 +40,32 @@ const Home = () => {
           <p className="intro-text">
             I am currently seeking full-time opportunities where I can apply my expertise in AI and software engineering to drive innovation and impact.
           </p>
+          <div className="absolute bottom-6 right-6 flex gap-4">
+            <a
+              href="https://github.com/tarif-khan"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 hover:text-gray-900 transition-colors"
+            >
+              <Github className="w-6 h-6" />
+            </a>
+            <a
+              href="https://www.instagram.com/tarifkn"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 hover:text-gray-900 transition-colors"
+            >
+              <Instagram className="w-6 h-6" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/tarif-khan-a23897229/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 hover:text-gray-900 transition-colors"
+            >
+              <Linkedin className="w-6 h-6" />
+            </a>
+          </div>
         </div>
       </div>
     </div>
