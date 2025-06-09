@@ -60,7 +60,7 @@ const Home = () => {
                   with a Bachelor's degree in Computer Science with a concentration in Artificial Intelligence, having graduated in May 2025.
                 </p>
                 <p>
-                  I current work as an AI Software Engineer at WorldQuant!
+                  I currently work as an AI Software Engineer at WorldQuant!
                 </p>
                 <p>
                   My professional journey includes impactful roles at Wellington Management, Scotiabank, 
