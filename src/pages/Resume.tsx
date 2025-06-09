@@ -63,7 +63,7 @@ const Resume = () => {
           <div className="flex items-center justify-center space-x-2 text-gray-600 dark:text-gray-400">
             <FileText className="w-4 h-4" />
             <span className="text-sm">
-              Last updated: December 2024
+              Last updated: This resume was last updated: May 2025
             </span>
           </div>
         </motion.div>
