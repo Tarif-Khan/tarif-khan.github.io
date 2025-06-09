@@ -5,6 +5,32 @@ import GlassCard from '../components/GlassCard';
 
 const experienceData = [
   {
+    id: -1,
+    position: "AI Software Engineer",
+    company: "WorldQuant",
+    location: "New York, NY",
+    date: "July 2025 - Present",
+    link: "https://www.worldquant.com/",
+    responsibilities: [],
+    skills: []
+  },
+  {
+    id: 0,
+    position: "Software Engineer",
+    company: "AIVantage",
+    location: "New York, NY",
+    date: "March 2025 - June 2025",
+    link: "https://aivantage.app/",
+    responsibilities: [
+      "Invented Context Renewal, an industry-first AI feature enabling conversation continuity across all LLM models",
+      "Integrated Gmail with AI features (reply, revise, HTML conversion), driving enterprise adoption in Hong Kong",
+      "Received VC offer of $1,000,000 and over 80,000 views on social media, leading to 275 users and 11 paying customers",
+      "Designed using React, TypeScript, GCP, AWS, Resend, proprietary AI API, Supabase, and the Stripe API",
+      "Integrated Browser Agent, Image Generation, Voice Agent, and Document Writing Agents, boosting productivity",
+    ],
+    skills: ["Python", "SQL", "R", "JavaScript", "React", "TypeScript", "GCP", "AWS", "Resend", "Supabase", "Stripe"]
+  },
+  {
     id: 1,
     position: "Quantitative Researcher Co-op",
     company: "Wellington Management",

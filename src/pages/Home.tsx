@@ -56,9 +56,11 @@ const Home = () => {
                 transition={{ delay: 0.8 }}
               >
                 <p>
-                  I am a senior at Northeastern University's Khoury College of Computer Sciences, 
-                  pursuing a Bachelor's degree in Computer Science with a concentration in Artificial Intelligence, 
-                  graduating in May 2025.
+                  I am a graduate from Northeastern University's Khoury College of Computer Sciences, 
+                  with a Bachelor's degree in Computer Science with a concentration in Artificial Intelligence, having graduated in May 2025.
+                </p>
+                <p>
+                  I current work as an AI Software Engineer at WorldQuant!
                 </p>
                 <p>
                   My professional journey includes impactful roles at Wellington Management, Scotiabank, 
