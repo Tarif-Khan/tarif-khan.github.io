@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Github, Instagram, Linkedin, ArrowRight } from 'lucide-react';
+import { Github, Instagram, Linkedin, ArrowRight, Briefcase, Code } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import GlassCard from '../components/GlassCard';
 
