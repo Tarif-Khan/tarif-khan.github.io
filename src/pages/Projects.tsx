@@ -1,6 +1,7 @@
 import React from 'react';
-import { MapPin } from 'lucide-react';
-import '../styles/projects.css';
+import { motion } from 'framer-motion';
+import { MapPin, ExternalLink, Calendar } from 'lucide-react';
+import GlassCard from '../components/GlassCard';
 
 const projectsData = [
   {
@@ -32,19 +33,6 @@ const projectsData = [
   },
   {
     id: 3,
-    title: "Antibodies vs Viruses",
-    date: "July 2024 - July 2024",
-    location: "New York, NY",
-    link: "https://play.unity.com/en/games/cba6438d-f875-4dd8-af6b-a72c57036340/antibodies-vs-viruses",
-    details: [
-      "Created a game which simulates an antibody taking on viruses using Unity and C#",
-      "Distributed the game on Unity online with over 50 plays",
-      "Implemented advesarial AI using the A* algorithm"
-    ],
-    skills: ["C#", "Unity"]
-  },
-  {
-    id: 4,
     title: "Community Center Program",
     date: "June 2024 - July 2024",
     location: "Boston, MA",
@@ -53,87 +41,12 @@ const projectsData = [
       "Published a C++ program for managing community center operations, emphasizing system design and object-oriented principles",
       "Developed a robust user authentication system for residents, non-residents, city officials, and organizations, ensuring secure and role-specific access",
       "Engineered a facility management module for event scheduling, budget tracking, and payment processing, enhancing operational efficiency",
-      "Implemented modular components to support scalability and future feature integration",
-      "Optimized data persistence and retrieval processes, improving system reliability and performance",
-      "Designed a comprehensive C++ system to streamline community center operations, including user management, facility booking, and financial tracking",
-      "Created a dynamic event scheduling system with conflict resolution to ensure optimal use of resources and facilities",
-      "Implemented financial management features to track payments, budget allocation, and expenditure, providing transparent financial oversight",
-      "Developed an admin dashboard for real-time monitoring of facility usage, event schedules, and financial metrics",
-      "Enhanced user experience with intuitive interfaces and responsive design, ensuring accessibility for all user roles"
+      "Implemented modular components to support scalability and future feature integration"
     ],
     skills: ["C++"]
   },
   {
-    id: 5,
-    title: "Destroy the Witches",
-    date: "July 2024 - July 2024",
-    location: "New York, NY",
-    link: "https://play.unity.com/en/games/75fb120d-7c1b-4a83-ada5-78dcef44321b/destroy-the-witches",
-    details: [
-      "Created a game where a character is taking on witches using Unity and C#",
-      "Distributed the game on Unity online with over 50 plays",
-      "Implemented advesarial AI agents using finite state machines, perceptrons and the A* algorithm"
-    ],
-    skills: ["C#", "Unity"]
-  },
-  {
-    id: 6,
-    title: "Predator Prey Game",
-    date: "June 2024 - July 2024",
-    location: "Boston, MA",
-    link: "https://github.com/Tarif-Khan/Predator-Prey-Game-Scenario",
-    details: [
-      "Engineered a C++ simulation modeling predator-prey dynamics",
-      "Developed basic AI for species, incorporating simple real-time decision-making for survival, movement, and reproduction strategies through algorithms",
-      "Designed a scalable, grid-based system to manage interactions, enhancing simulation accuracy and performance",
-      "Led the creation of modular, extensible code, ensuring future adaptability and ease of integration with additional features"
-    ],
-    skills: ["C++"]
-  },
-  {
-    id: 7,
-    title: "Roster Generator",
-    date: "June 2024 - July 2024",
-    location: "Boston, MA",
-    link: "https://github.com/Tarif-Khan/Roster-Generator",
-    details: [
-      "Designed and implemented a C++ application for automated team roster generation, optimizing the assignment process based on user-defined parameters",
-      "Developed a modular architecture that allows for efficient data input, processing, and output, ensuring flexibility and scalability",
-      "Integrated file handling capabilities to import and export CSV data, facilitating seamless data management and reporting",
-      "Utilized advanced algorithms to balance teams based on specified criteria, enhancing fairness and performance"
-    ],
-    skills: ["C++"]
-  },
-  {
-    id: 8,
-    title: "Airline Reservation System",
-    date: "May 2024 - June 2024",
-    location: "Boston, MA",
-    link: "https://github.com/Tarif-Khan/Airline-Reservation-System",
-    details: [
-      "Developed a C++ based Airline Reservation System to manage flight bookings, cancellations, and user profiles",
-      "Implemented key functions such as flight search, reservation management, and user authentication with efficient data handling",
-      "Designed and maintained structured code with a focus on modularity and reusability, utilizing header files and separate functions",
-      "Collaborated in documenting system architecture and pseudocode for clear understanding and future scalability"
-    ],
-    skills: ["C++"]
-  },
-  {
-    id: 9,
-    title: "Air Hockey Game",
-    date: "May 2024 - June 2024",
-    location: "Boston, MA",
-    link: "https://github.com/Tarif-Khan/Air-Hockey",
-    details: [
-      "Developed a C++ application simulating an Air Hockey game, demonstrating expertise in object-oriented programming",
-      "Implemented real-time game mechanics including puck movement, collision detection, and scoring using custom-built physics logic",
-      "Designed modular code structure for key components such as sliders, puck, and zones, ensuring maintainability and scalability",
-      "Integrated responsive keyboard controls, delivering a user-friendly gaming experience"
-    ],
-    skills: ["C++"]
-  },
-  {
-    id: 10,
+    id: 4,
     title: "Make Money",
     date: "September 2023 - December 2023",
     location: "Boston, MA",
@@ -147,21 +60,7 @@ const projectsData = [
     skills: ["React", "MongoDB", "Express.js", "JavaScript", "Node.js", "HTML", "CSS"]
   },
   {
-    id: 11,
-    title: "Decision Making Tool",
-    date: "January 2023 - January 2023",
-    location: "New York, NY",
-    link: "https://github.com/Tarif-Khan/Decision-Making-Tool",
-    details: [
-      "Created a program in Java within the IntelliJ Idea IDE to help make decisions for the user given a number of options",
-      "Designed the program using a Model, View, Controller methodology",
-      "Implemented the program to be able to add, delete, modify, and randomly select options",
-      "Tested the program using JUnit4 testing"
-    ],
-    skills: ["Java", "Java Swing", "JUnit 4"]
-  },
-  {
-    id: 11,
+    id: 5,
     title: "NUFS File System",
     date: "November 2022 - December 2022",
     location: "Boston, MA",
@@ -174,151 +73,115 @@ const projectsData = [
     skills: ["C"]
   },
   {
-    id: 12,
-    title: "Youtube Video Analysis Tool",
-    date: "October 2022 - December 2022",
-    location: "Boston, MA",
-    details: [
-      "Created a program in Python using the Jupyter Notebook which was able to predict whether a Youtube video would be considered successful or not",
-      "Designed the program to consider numerical properties of a video such as likes, views, and the number of comments in the decision making of the algorithm",
-      "Programmed a sentiment analysis tool to analyze and quantify comments of each video to assist in decision making",
-      "Structured the algorithm to make use of a decision tree model as well as a linear regression model through hyper parameter tuning to make its evaluation of a video",
-      "Trained the model using sklearn and cleaned the data from Youtube's database",
-      "Published and visualized all of the data and our findings using pandas, numpy, and seaborn",
-      "Tested the project using the data set as well as newly generated data for accuracy across multiple use cases"
-    ],
-    skills: ["Python"]
-  },
-  {
-    id: 13,
-    title: "Memory Allocator",
-    date: "November 2022 - November 2022",
-    location: "Boston, MA",
-    link: "https://github.com/Tarif-Khan/Memory-Allocator",
-    details: [
-      "Created a memory allocator in C which is able to allocate input values to memory within the system",
-      "Designed the allocator to be able to both allocate and free memory",
-      "Programmed the allocator to be able to work with one input as well as hundreds of inputs",
-      "Tested the memory allocator on the Khoury Virtual Machine using the Perl Script provided which tests for single use as well as looped use applications for allocating as well as freeing data",
-    ],
-    skills: ["C"]
-  },
-  {
-    id: 14,
-    title: "Shell in C",
-    date: "October 2022 - October 2022",
-    location: "Boston, MA",
-    details: [
-      "Created a shell bash using C which can act as a second terminal within a terminal",
-      "Designed the shell to be able to invoke the following traditional methods : echo, ls, touch, mkdir, rm, |, cd, and prev",
-      "Structured the shell to be able to run scripts, projects, and multiple commands per line",
-      "Tested the shell bash on the Khoury Virtual Machine using the Perl Script provided which tests for single use as well as looped use applications to precisely compare the output of functions input into the bash to provide the proper result in both applications which make use of one function per line as well as multiple functions per line",
-    ],
-    skills: ["C"]
-  },
-  {
-    id: 15,
-    title: "Calculator in Assembly",
-    date: "September 2022 - September 2022",
-    location: "Boston, MA",
-    link: "https://github.com/Tarif-Khan/Calculator-in-Assembly",
-    details: [
-      "Created a calculator in assembly language which can add, subtract, multiply, and divide",
-      "Programmed the functions to perform the arithmetic through the manipulation of memory addresses which hold the values of the algebraic expressions input to the calculator",
-      "Designed the calculator to be able to be invoked in the terminal",
-    ],
-    skills: ["C"]
-  },
-  {
-    id: 16,
-    title: "Bill Splitting Calculator",
-    date: "August 2022 - August 2022",
-    location: "New York, NY",
-    details: [
-      "Designed a calculator which can easily split the bill in Java and planned with an object oriented approach",
-      "Designed the program using a Model, View, Controller methodology",
-      "Developed the project using Java’s Swing package on the IntelliJ IDE with a model, view, controller design recipe",
-      "Tested the program using JUnit tests for each function to assure that methods work as intended"
-    ],
-    skills: ["Java", "Java Swing", "JUnit 4"]
-  },
-  {
-    id: 17,
+    id: 6,
     title: "Image Processing Program",
     date: "June 2022 - June 2022",
     location: "Boston, MA",
     link: "https://github.com/Tarif-Khan/Image-Processing-Program",
     details: [
       "Implemented an image processing program where pngs, ppms, jpegs, and jpgs can be edited in various ways with the use of filters, rotations, and a combination of both",
-      "Filtered images using the command design pattern as each pixel’s RGB component was manipulated using loops",
+      "Filtered images using the command design pattern as each pixel's RGB component was manipulated using loops",
       "Designed the program using a Model, View, Controller methodology",
-      "Developed the project using Java’s Swing package on the IntelliJ IDE with a model, view, controller design recipe",
-      "Tested the program using JUnit tests for each function to assure that methods work as intended"
+      "Developed the project using Java's Swing package on the IntelliJ IDE with a model, view, controller design recipe"
     ],
     skills: ["Java", "Java Swing", "JUnit 4"]
-  },
-  {
-    id: 18,
-    title: "Marble Solitaire",
-    date: "May 2022 - June 2022",
-    location: "Boston, MA",
-    link: "https://github.com/Tarif-Khan/Marble-Solitaire",
-    details: [
-      "Engineered a text based implementation of Marble Solitaire where the game can be played on the console as well as the designated GUI implemented using Java Swing",
-      "Generated the implementation in Java with algorithms manipulating an array of pieces to calculate all valid move",
-      "Designed the program using a Model, View, Controller methodology",
-      "Developed the project using Java’s Swing package on the IntelliJ IDE with a model, view, controller design recipe",
-      "Tested the program using JUnit tests for each function to assure that methods work as intended"
-    ],
-    skills: ["Java", "Java Swing", "JUnit 4"]
-  },
-  {
-    id: 19,
-    title: "Password Cracker",
-    date: "May 2022 - June 2022",
-    location: "Boston, MA",
-    details: [
-      "Cracked 50 unique passwords using Hashcat as well as John the Ripper alongside commonly used dictionaries and combinations",
-      "Created a program in Java within the Visual Studio Code IDE which can provide a strong password with a high entropy level",
-      "Designed a program in in Java within the Visual Studio Code IDE which can use Hashcat as well as John the Ripper to crack passwords on a Linux terminal or Linux/Unix based virtual machine",
-    ],
-    skills: ["Python"]
-  },
+  }
 ];
 
 const Projects = () => {
   return (
-    <div className="projects-container">
-      <h2 className="text-3xl font-bold text-gray-900 mb-6">Projects</h2>
-      <div className="projects-grid">
-        {projectsData.map((project) => (
-          <a 
-            key={project.id}
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer" 
-            className="project-card"
-          >
-            <div className="title">{project.title}</div>
-            <div className="date">{project.date}</div>
-            <div className="location">
-              <MapPin size={16} className="inline mr-1" />
-              {project.location}
-            </div>
-            <ul className="details">
-              {project.details.map((detail, index) => (
-                <li key={index}>{detail}</li>
-              ))}
-            </ul>
-            <div className="skills">
-              {project.skills.map((skill, index) => (
-                <span key={index} className="skill-badge">
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </a>
-        ))}
+    <div className="min-h-screen px-6 py-12">
+      <div className="max-w-6xl mx-auto">
+        <motion.div
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <h1 className="text-5xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-400 bg-clip-text text-transparent mb-4">
+            Featured Projects
+          </h1>
+          <p className="text-xl text-gray-600 dark:text-gray-300">
+            Showcasing innovation through code and creativity
+          </p>
+        </motion.div>
+
+        <div className="grid md:grid-cols-2 gap-8">
+          {projectsData.map((project, index) => (
+            <GlassCard key={project.id} delay={index * 0.1} className="p-6 h-full">
+              <div className="flex flex-col h-full">
+                <div className="flex items-start justify-between mb-4">
+                  <motion.h3
+                    className="text-xl font-bold text-gray-800 dark:text-white flex-1"
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.3 + index * 0.1 }}
+                  >
+                    {project.title}
+                  </motion.h3>
+                  {project.link && (
+                    <motion.a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors ml-2"
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <ExternalLink className="w-5 h-5" />
+                    </motion.a>
+                  )}
+                </div>
+
+                <motion.div
+                  className="flex items-center text-sm text-gray-600 dark:text-gray-400 mb-4 space-x-4"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.4 + index * 0.1 }}
+                >
+                  <div className="flex items-center">
+                    <Calendar className="w-4 h-4 mr-1" />
+                    {project.date}
+                  </div>
+                  <div className="flex items-center">
+                    <MapPin className="w-4 h-4 mr-1" />
+                    {project.location}
+                  </div>
+                </motion.div>
+
+                <motion.ul
+                  className="space-y-2 mb-6 flex-1"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.5 + index * 0.1 }}
+                >
+                  {project.details.slice(0, 3).map((detail, idx) => (
+                    <li key={idx} className="flex items-start text-sm text-gray-700 dark:text-gray-300">
+                      <span className="w-1.5 h-1.5 bg-purple-500 rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                      {detail}
+                    </li>
+                  ))}
+                </motion.ul>
+
+                <motion.div
+                  className="flex flex-wrap gap-2 mt-auto"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.6 + index * 0.1 }}
+                >
+                  {project.skills.map((skill, idx) => (
+                    <span
+                      key={idx}
+                      className="px-2 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 rounded-full text-xs font-medium"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </motion.div>
+              </div>
+            </GlassCard>
+          ))}
+        </div>
       </div>
     </div>
   );

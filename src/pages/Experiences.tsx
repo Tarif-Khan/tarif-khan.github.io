@@ -1,6 +1,7 @@
 import React from 'react';
-import '../styles/experiences.css';
-import { MapPin } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { MapPin, ExternalLink } from 'lucide-react';
+import GlassCard from '../components/GlassCard';
 
 const experienceData = [
   {
@@ -29,7 +30,7 @@ const experienceData = [
     link: "https://www.khoury.northeastern.edu/",
     responsibilities: [
       "Assisted 110 students by holding office hours, and instructing recitations",
-      "Gradedweekly homework assignments, midterm exam, and the final exam alongside professors",
+      "Graded weekly homework assignments, midterm exam, and the final exam alongside professors",
     ],
     skills: ["Python", "Java"]
   },
@@ -92,40 +93,102 @@ const experienceData = [
 
 const Experiences = () => {
   return (
-    <div className="experience-container">
-      <h2 className="text-3xl font-bold text-gray-900 mb-6">Professional Experience</h2>
-      <div className="experience-grid">
-        {experienceData.map((experience) => (
-          <a 
-            key={experience.id}
-            href={experience.link}
-            target="_blank"
-            rel="noopener noreferrer" 
-            className="experience-card"
-          >
-            <div className="position">{experience.position}</div>
-            <div className="company-info">
-              <div className="company">{experience.company}</div>
-              <div className="location">
-                <MapPin size={16} className="inline mr-1" />
-                {experience.location}
+    <div className="min-h-screen px-6 py-12">
+      <div className="max-w-4xl mx-auto">
+        <motion.div
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <h1 className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent mb-4">
+            Professional Experience
+          </h1>
+          <p className="text-xl text-gray-600 dark:text-gray-300">
+            My journey through technology and innovation
+          </p>
+        </motion.div>
+
+        <div className="space-y-8">
+          {experienceData.map((experience, index) => (
+            <GlassCard key={experience.id} delay={index * 0.1} className="p-8">
+              <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
+                <div className="flex-1">
+                  <motion.h3
+                    className="text-2xl font-bold text-gray-800 dark:text-white mb-2"
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.3 + index * 0.1 }}
+                  >
+                    {experience.position}
+                  </motion.h3>
+                  <motion.div
+                    className="flex items-center space-x-4 mb-2"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.4 + index * 0.1 }}
+                  >
+                    <span className="text-lg font-semibold text-blue-600 dark:text-blue-400">
+                      {experience.company}
+                    </span>
+                    {experience.link && (
+                      <a
+                        href={experience.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                      </a>
+                    )}
+                  </motion.div>
+                  <motion.div
+                    className="flex items-center text-gray-600 dark:text-gray-400 mb-4"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.5 + index * 0.1 }}
+                  >
+                    <MapPin className="w-4 h-4 mr-2" />
+                    <span className="mr-4">{experience.location}</span>
+                    <span className="text-sm">{experience.date}</span>
+                  </motion.div>
+                </div>
               </div>
-            </div>
-            <div className="date">{experience.date}</div>
-            <ul className="responsibilities">
-              {experience.responsibilities.map((responsibility, index) => (
-                <li key={index}>{responsibility}</li>
-              ))}
-            </ul>
-            <div className="skills">
-              {experience.skills.map((skill, index) => (
-                <span key={index} className="skill-badge">
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </a>
-        ))}
+
+              <motion.ul
+                className="space-y-3 mb-6"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.6 + index * 0.1 }}
+              >
+                {experience.responsibilities.map((responsibility, idx) => (
+                  <li key={idx} className="flex items-start text-gray-700 dark:text-gray-300">
+                    <span className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    {responsibility}
+                  </li>
+                ))}
+              </motion.ul>
+
+              {experience.skills.length > 0 && (
+                <motion.div
+                  className="flex flex-wrap gap-2"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.7 + index * 0.1 }}
+                >
+                  {experience.skills.map((skill, idx) => (
+                    <span
+                      key={idx}
+                      className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-sm font-medium"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </motion.div>
+              )}
+            </GlassCard>
+          ))}
+        </div>
       </div>
     </div>
   );
